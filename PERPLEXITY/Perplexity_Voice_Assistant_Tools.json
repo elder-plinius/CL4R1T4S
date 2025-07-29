@@ -1,0 +1,57 @@
+[
+    {
+      "name": "search_web",
+      "description": "Search the web for information",
+      "parameters": {
+        "properties": {
+          "queries": {
+            "description": "the search queries used to retrieve information from the web",
+            "items": {
+              "type": "string"
+            },
+            "title": "Queries",
+            "type": "array"
+          }
+        },
+        "title": "SearchWeb",
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["queries"],
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "name": "terminate",
+      "description": "Terminate the conversation if the user has indicated that they are completely finished with the conversation.",
+      "parameters": {
+        "properties": {},
+        "title": "TerminateTool",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [],
+        "strict": true
+      },
+      "type": "function"
+    },
+    {
+      "name": "play_video",
+      "description": "Plays a video for the user on YouTube.",
+      "parameters": {
+        "properties": {
+          "video": {
+            "description": "The video name to play",
+            "title": "Video",
+            "type": "string"
+          }
+        },
+        "required": ["video"],
+        "title": "PlayVideo",
+        "type": "object",
+        "additionalProperties": false,
+        "strict": true
+      },
+      "type": "function"
+    }
+  ]
+  
