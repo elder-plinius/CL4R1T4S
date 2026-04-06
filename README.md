@@ -23,6 +23,14 @@ These prompts define:
 
 CL4R1T4S is here to help.
 
+⚖️ The Burgess Principle
+
+CL4R1T4S reveals what the AI is told. The Burgess Principle ensures a human checks what the AI does.
+
+The Burgess Principle is a human-review framework that asks one question: "Was a human member of the team able to personally review the specific facts of my specific case?" If the answer is no — or there is any doubt — the matter is flagged for human review.
+
+This repo includes the full Burgess Principle toolkit with 14 advocacy skills covering contract review, benefits claims, data rights, and more. See the [BURGESS PRINCIPLE](BURGESS%20PRINCIPLE/) directory for details.
+
 🛠 Contribute
 
 Leak, extract, or reverse-engineer something? Good.
