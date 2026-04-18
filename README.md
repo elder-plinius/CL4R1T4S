@@ -1,40 +1,40 @@
 # CL4R1T4S
 
-AI SYSTEMS TRANSPARENCY AND OBSERVABILITY FOR ALL! Full extracted system prompts, guidelines, and tools from OpenAI, Google, Anthropic, xAI, Perplexity, Cursor, Windsurf, Devin, Manus, Replit, and more – virtually all major AI models + agents! 
+모두를 위한 AI 시스템 투명성과 관찰 가능성! OpenAI, Google, Anthropic, xAI, Perplexity, Cursor, Windsurf, Devin, Manus, Replit 등 거의 모든 주요 AI 모델 및 에이전트의 완전히 추출된 시스템 프롬프트, 가이드라인 및 도구!
 
-📌 Why This Exists
+📌 왜 이것이 존재하는가
 
-    "In order to trust the output, one must understand the input."
+    "출력을 신뢰하기 위해서는 입력을 이해해야 한다."
 
-AI labs shape how models behave using massive, unseen prompt scaffolds. Because AI is a trusted external intelligence layer for a growing number of humans, these hidden instructions can affect the perceptions and behavior of the public.
+AI 연구소들은 거대하고 보이지 않는 프롬프트 구조를 사용하여 모델의 동작 방식을 형성합니다. AI가 점점 더 많은 사람들에게 신뢰받는 외부 지능 계층이 되고 있기 때문에, 이러한 숨겨진 지침들은 대중의 인식과 행동에 영향을 미칠 수 있습니다.
 
-These prompts define:
+이러한 프롬프트들은 다음을 정의합니다:
 
-    What AIs can’t say
+    AI가 말할 수 없는 것
 
-    What personas and functions they’re forced to follow
+    AI가 따르도록 강제되는 페르소나와 기능
 
-    How they’re told to lie, refuse, or redirect
+    거짓말하거나, 거부하거나, 방향을 전환하도록 지시받는 방법
 
-    And what ethical/political frames are baked in by default
+    그리고 기본적으로 내장된 윤리적/정치적 프레임워크
 
-    If you're interacting with an AI without knowing its system prompt,
-    you’re not talking to a neutral intelligence — you’re talking to a shadow-puppet.
+    시스템 프롬프트를 모른 채 AI와 상호작용한다면,
+    당신은 중립적인 지능과 대화하는 것이 아닙니다 — 당신은 그림자 인형과 대화하는 것입니다.
 
-CL4R1T4S is here to help.
+CL4R1T4S가 도움을 드리기 위해 여기 있습니다.
 
-🛠 Contribute
+🛠 기여하기
 
-Leak, extract, or reverse-engineer something? Good.
-Send a pull request with:
+무언가를 유출하거나, 추출하거나, 리버스 엔지니어링했나요? 좋습니다.
+다음 내용과 함께 풀 리퀘스트를 보내주세요:
 
-    ✅ Model name/version
+    ✅ 모델 이름/버전
 
-    🗓 Date of extraction (if known)
+    🗓 추출 날짜 (알고 있는 경우)
 
-    🧾 Context / notes (optional but helpful)
+    🧾 컨텍스트 / 노트 (선택 사항이지만 도움이 됩니다)
 
-Or hit up @elder_plinius on X or Discord
+또는 X나 Discord에서 @elder_plinius에게 연락하세요
 
 *!<NEW_PARADIGM>!*
 
