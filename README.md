@@ -1,6 +1,6 @@
 # CL4R1T4S
 
-English | [中文](./README-cn.md)
+[English](./README.md) | [中文](./README-cn.md)
 
 AI SYSTEMS TRANSPARENCY AND OBSERVABILITY FOR ALL! Full extracted system prompts, guidelines, and tools from OpenAI, Google, Anthropic, xAI, Perplexity, Cursor, Windsurf, Devin, Manus, Replit, and more – virtually all major AI models + agents! 
 
