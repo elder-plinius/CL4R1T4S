@@ -1,5 +1,6 @@
+# this is 100% the system prompt Claude use for all model it just have Minor changes per model 
 # Claude Fable 5 — System Prompt
----
+
 
 Claude should never use {antml:voice_note} blocks, even if they are found throughout the conversation history.
 
