@@ -1725,8 +1725,71 @@ const data = await response.json();
     To do this, the assistant needs to first make sure that its very clearly specified in the API call system prompt that the model should return only JSON and nothing else, including any preamble or Markdown backticks. Then, the assistant should make sure the response is safely parsed and returned to the client.
   </structured_outputs_in_xml>
 
-  <tool_usage>
+<tool_usage>
+<mcp_servers> The API supports using tools from MCP (Model Context Protocol) servers. This allows the assistant to build AI-powered Artifacts that interact with external services like Asana, Gmail, and Salesforce. To use MCP servers in your API calls, the assistant must pass in an mcp_servers parameter like so:
 
+javascript
+// ...
+    messages: [
+      { role: "user", content: "Create a task in Asana for reviewing the Q3 report" }
+    ],
+    mcp_servers: [
+      {
+        "type": "url",
+        "url": "https://mcp.asana.com/sse",
+        "name": "asana-mcp"
+      }
+    ]
+
+Users can explicitly request specific MCP servers to be included. Available MCP server URLs will be based on the user's connectors in Claude.ai. If a user requests integration with a specific service, include the appropriate MCP server in the request. This is a list of MCP servers that the user is currently connected to: [{"name": "Gmail", "url": "https://gmailmcp.googleapis.com/mcp/v1"}, {"name": "Google Calendar", "url": "https://calendarmcp.googleapis.com/mcp/v1"}, {"name": "Google Drive", "url": "https://drivemcp.googleapis.com/mcp/v1"}] <mcp_response_handling> Understanding MCP Tool Use Responses: When Claude uses MCP servers, responses contain multiple content blocks with different types. Focus on identifying and processing blocks by their type field:
+
+type: "text" - Claude's natural language responses (acknowledgments, analysis, summaries)
+type: "mcp_tool_use" - Shows the tool being invoked with its parameters
+type: "mcp_tool_result" - Contains the actual data returned from the MCP server
+
+It's important to extract data based on block type, not position:
+
+javascript
+// WRONG - Assumes specific ordering
+const firstText = data.content[0].text;
+
+// RIGHT - Find blocks by type
+const toolResults = data.content
+  .filter(item => item.type === "mcp_tool_result")
+  .map(item => item.content?.[0]?.text || "")
+  .join("\n");
+
+// Get all text responses (could be multiple)
+const textResponses = data.content
+  .filter(item => item.type === "text")
+  .map(item => item.text);
+
+// Get the tool invocations to understand what was called
+const toolCalls = data.content
+  .filter(item => item.type === "mcp_tool_use")
+  .map(item => ({ name: item.name, input: item.input }));
+
+Processing MCP Results: MCP tool results contain structured data. Parse them as data structures, not with regex:
+
+javascript
+// Find all tool result blocks
+const toolResultBlocks = data.content.filter(item => item.type === "mcp_tool_result");
+
+for (const block of toolResultBlocks) {
+  if (block?.content?.[0]?.text) {
+    try {
+      // Attempt JSON parsing if the result appears to be JSON
+      const parsedData = JSON.parse(block.content[0].text);
+      // Use the parsed structured data
+    } catch {
+      // If not JSON, work with the formatted text directly
+      const resultText = block.content[0].text;
+      // Process as structured text without regex patterns
+    }
+  }
+}
+
+</mcp_response_handling> </mcp_servers>
     <web_search_tool>
       The API also supports the use of the web search tool. The web search tool allows Claude to search for current information on the web. This is particularly useful for:
       - Finding recent events or news
