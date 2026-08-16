@@ -1,4 +1,7 @@
-# CL4R1T4S
+{
+  prompt: "A red apple on a table",
+  transparent_background: true
+}# CL4R1T4S
 
 AI SYSTEMS TRANSPARENCY AND OBSERVABILITY FOR ALL! Full extracted system prompts, guidelines, and tools from OpenAI, Google, Anthropic, xAI, Perplexity, Cursor, Windsurf, Devin, Manus, Replit, and more – virtually all major AI models + agents! 
 
